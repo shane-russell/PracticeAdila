@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PracticeAdila.Domain\PracticeAdila.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Database1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database1.cs</LastGenOutput>

@@ -7,7 +7,8 @@ using PracticeAdila.Domain;
 
 namespace PracticeAdila.Data
 {
-    public class PracticeAdilaDbContext : IdentityDbContext<User, Role, int>
+    public class PracticeAdilaDbContext : DbContext
+
     {
         public PracticeAdilaDbContext() : base()
         {

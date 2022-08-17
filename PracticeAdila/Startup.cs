@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PracticeAdila.Api;
 using PracticeAdila.Data;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace PracticeAdila
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
             services.AddMvc();
             services.AddDbContext<PracticeAdilaDbContext>(options =>
             {
@@ -33,6 +34,8 @@ namespace PracticeAdila
             });
 
             services.AddRazorPages();
+
+            services.AddScoped<Api.IRestaurantRepository, RestaurantRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,10 +57,13 @@ namespace PracticeAdila
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
