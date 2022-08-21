@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PracticeAdila.Domain.Models
+namespace PracticeAdila.Data.Domain
 {
     internal class RestaurantModel
     {

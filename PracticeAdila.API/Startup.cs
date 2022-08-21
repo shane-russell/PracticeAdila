@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PracticeAdila.Api;
+using OdeToFood.Api.Services;
+using PracticeAdila.API.Services;
 using PracticeAdila.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using IRestaurantRepository = PracticeAdila.Api.IRestaurantRepository;
 
-namespace PracticeAdila
+namespace PracticeAdila.API
 {
     public class Startup
     {
@@ -26,17 +26,12 @@ namespace PracticeAdila
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        { 
-            services.AddMvc();
-            services.AddDbContext<PracticeAdilaDbContext>(options =>
-            {
-                string connectionString = @"Data Source = DESKTOP-7M7OSA9; Initial Catalog = PracticeAdilaDb; Integrated Security = True";
-                options.UseSqlServer(connectionString);
-            });
-
+        {
+            services.AddDbContext<PracticeAdilaDbContext>(options => options.UseSqlServer("Data Source = DESKTOP-7M7OSA9; Initial Catalog = PracticeAdilaDb2; Integrated Security = True"));
             services.AddRazorPages();
-
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
+            services.AddScoped<IReviewFactory, ReviewFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,14 +53,12 @@ namespace PracticeAdila
 
             app.UseRouting();
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

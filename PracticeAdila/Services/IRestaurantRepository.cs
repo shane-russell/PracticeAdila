@@ -1,15 +1,20 @@
 ﻿using PracticeAdila.Data;
-using PracticeAdila.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Threading.Tasks;
 
 namespace PracticeAdila.Api
 {
     public interface IRestaurantRepository
     {
-        public IList<Restaurant> GetAllRestaurants();
-        public Restaurant GetById(int id);
+        public Task<IList<Restaurant>> GetAllRestaurantsAsync();
+        public Task<Restaurant> GetByIdAsync(int id);
+
+        public Task<Restaurant> AddAsync(Restaurant restaurant);
+
+        public Task UpdateAsync(Restaurant restaurant);
+
+        public Task DeleteAsync(int id);
     }
 }

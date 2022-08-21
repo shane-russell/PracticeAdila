@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using PracticeAdila.Domain;
+using PracticeAdila.Data;
 
 namespace PracticeAdila.Data
 {
@@ -24,9 +24,7 @@ namespace PracticeAdila.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Data Source=.;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
-            // previous string:
-            // optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = PracticeAdilaDb; Integrated Security = True");
+            // optionsBuilder.UseSqlServer("Data Source = DESKTOP-7M7OSA9; Initial Catalog = PracticeAdilaDb; Integrated Security = True");
             
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

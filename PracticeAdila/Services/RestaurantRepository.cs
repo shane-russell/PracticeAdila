@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PracticeAdila.Data;
-using PracticeAdila.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

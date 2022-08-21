@@ -3,14 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeAdila.Api", "PracticeAdila\PracticeAdila.Api.csproj", "{4C1C4CA2-B843-4FC5-81B1-9D36A7DB233C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{24F13FDB-6037-4E35-B60A-1EBEC07D4705} = {24F13FDB-6037-4E35-B60A-1EBEC07D4705}
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeAdila.Data", "PracticeAdila.Data\PracticeAdila.Data.csproj", "{24F13FDB-6037-4E35-B60A-1EBEC07D4705}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeAdila.Tests", "PracticeAdila.Tests\PracticeAdila.Tests.csproj", "{0B59DE78-58E9-4B39-B935-26F41F4A32AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeAdila.API", "PracticeAdila.API\PracticeAdila.API.csproj", "{ABCF82D2-CD17-4C27-8E0C-7421AE3D72DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C1C4CA2-B843-4FC5-81B1-9D36A7DB233C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C1C4CA2-B843-4FC5-81B1-9D36A7DB233C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C1C4CA2-B843-4FC5-81B1-9D36A7DB233C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C1C4CA2-B843-4FC5-81B1-9D36A7DB233C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24F13FDB-6037-4E35-B60A-1EBEC07D4705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24F13FDB-6037-4E35-B60A-1EBEC07D4705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24F13FDB-6037-4E35-B60A-1EBEC07D4705}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,6 +23,10 @@ Global
 		{0B59DE78-58E9-4B39-B935-26F41F4A32AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B59DE78-58E9-4B39-B935-26F41F4A32AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B59DE78-58E9-4B39-B935-26F41F4A32AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABCF82D2-CD17-4C27-8E0C-7421AE3D72DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCF82D2-CD17-4C27-8E0C-7421AE3D72DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCF82D2-CD17-4C27-8E0C-7421AE3D72DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCF82D2-CD17-4C27-8E0C-7421AE3D72DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
